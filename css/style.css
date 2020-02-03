@@ -1,0 +1,184 @@
+html, body {
+    /* height: 100%; */
+    margin: 0;
+     background: #1a1a1a/*linear-gradient(270deg,#C33764, #1D2671); */
+    /* background: url("../img/01232_lazydaysii_1920x1080.jpg") 0; */
+  }
+
+.brand {
+    display: grid;
+    /* color:linear-gradient(1D2671, #C33764); */
+    grid-template-columns: 10% 1fr 10%;
+    height: auto;
+
+ }
+
+.brand h1{
+    color: #edeae5;
+    text-align: center;
+    grid-column: 2/3;
+}
+ .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100%;
+    color: goldenrod;
+ }
+
+ .container img {
+    display: none;
+ }
+
+.nav {
+    grid-column: 3/4;
+    grid-row: 1/2;
+ }
+
+ .container .nav ul li {
+    float: right;
+    list-style-type: none;
+    padding: 7%;
+ }
+
+ .container .nav ul li a {
+    text-decoration: none;
+    color: #edeae5;
+
+ }
+
+
+ .container .by{
+    grid-column: 2/3;
+    text-align: center;
+    color: #edeae5;
+ }
+
+ .albums {
+    display: flex;
+    padding: 6%;
+    color: #edeae5;
+  }
+ .picture {
+    float: left;
+    width: 33.33%;
+    height: 3%;
+    padding: 5px;
+  }
+
+.container .nav .btn-romeo{
+    background: #3284f0;
+    height: 15px;
+    width: 200px;
+    grid-row: 1/2;
+    padding: 10%;
+}
+  
+  /* Clear floats after image containers */
+  .albums::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+.picture hr {
+    background: goldenrod;
+    /* display: none; */
+  }
+
+  .picture h1 {
+    text-align: center;
+}
+  
+
+.footer {
+    /* background:linear-gradient(#C33764, #1D2671); */
+    color: #edeae5;
+    height: 10%;
+}
+
+.footer p {
+    text-align: center;
+    padding: 2%;
+}
+
+/* Responsiveness */
+
+@media only screen and (max-width: 788px){
+
+    .albums {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 1fr 1fr;
+        padding: 5%;
+    }
+
+    .container {
+        grid-template-columns: 40% 20% 40%;
+        grid-template-rows: 90px;
+        /* grid-template-areas: "by nav" ; */
+        height: 90px;
+        /* overflow: hidden; */
+    }
+
+    .container .nav {
+        grid-column: 3/4;
+        grid-row: 1/2;
+        display: none;
+        /* padding-top: 25px; */
+        justify-self: end;
+
+    }
+
+    .container .by {
+        text-align: center;
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+
+    /* .container .nav ul {
+        display: none;
+        position: absolute;
+        top: 195px;
+        left: 0;
+        display: grid;
+        grid-template-columns: 100%;
+    } */
+    .container .nav ul li {
+        padding: 13px;
+        text-align: center;
+    }
+
+    .container img {
+        display: block;
+    }
+
+    .picture {
+        float: none;
+        width: 100%;
+        height: 3%;
+        padding: 5px;
+      }
+
+      .picture hr {
+          text-align: center;
+          background: #000;
+          color: #000;
+          width: 90%;
+          height: 0px;
+      }
+
+      .picture h1 {
+          text-align: center;
+      }
+      /* Footer */
+      .footer {
+        height: 10%;
+    }
+    
+    .footer p {
+        text-align: center;
+        padding-top: 7%;
+    }
+    /* End of footer */
+  
+}
